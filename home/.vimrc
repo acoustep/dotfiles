@@ -123,7 +123,8 @@ nnoremap <C-k><C-b> :NERDTreeToggle<CR>
 nnoremap Y y$
 nnoremap <tab> >>
 nnoremap <s-tab> <<
-noremap ; :
+nnoremap ; :
+vnoremap ; :
 " " Start interactive EasyAlign with a Vim movement
 nmap <Leader>a <Plug>(EasyAlign)
 " Visual remap
