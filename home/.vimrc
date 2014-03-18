@@ -128,7 +128,7 @@ vnoremap ? ?\v
 vnoremap <tab> >
 vnoremap <s-tab> <
   
-colorscheme railscasts
+colorscheme ChocolateLiquor
 
 " Set js files to javascript and jquery syntax
 au BufRead,BufNewFile *.js set ft=javascript syntax=jquery
