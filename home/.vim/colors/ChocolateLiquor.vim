@@ -17,7 +17,7 @@ endif
 let g:colors_name = "ChocolateLiquor"
 
 hi Normal guibg=#3f1f1f guifg=PapayaWhip ctermfg=White
-hi NonText guibg=#1f0f0f guifg=Brown2 ctermfg=Brown ctermbg=Black
+hi NonText guibg=#3f1f1f  guifg=Brown2 ctermfg=Brown ctermbg=Black
 hi LineNr guibg=#1f0f0f guifg=Brown2
 hi DiffDelete guibg=DarkRed guifg=White ctermbg=DarkRed ctermfg=White
 hi DiffAdd guibg=DarkGreen guifg=White ctermbg=DarkGreen ctermfg=White
