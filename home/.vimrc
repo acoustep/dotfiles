@@ -33,6 +33,8 @@ NeoBundle 'tpope/vim-sensible'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tobyS/pdv' " PHPDocs
 NeoBundle 'depuracao/vim-rdoc'
+NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'tpope/vim-abolish'
 
 " NeoBundle Languages
 NeoBundle 'elzr/vim-json'
@@ -121,13 +123,15 @@ nnoremap <C-k><C-b> :NERDTreeToggle<CR>
 nnoremap Y y$
 nnoremap <tab> >>
 nnoremap <s-tab> <<
-
+" " Start interactive EasyAlign with a Vim movement
+nmap <Leader>a <Plug>(EasyAlign)
 " Visual remap
 vnoremap / /\v
 vnoremap ? ?\v
 vnoremap <tab> >
 vnoremap <s-tab> <
-  
+" Start interactive EasyAlign in visual mode
+vmap <Enter> <Plug>(EasyAlign)
 colorscheme ChocolateLiquor
 
 " Set js files to javascript and jquery syntax
