@@ -143,6 +143,7 @@ autocmd BufRead,BufWritePre *.html normal gg=G
 
 augroup vimscript
   autocmd!
+	autocmd FileType vim setlocal foldmethod=marker
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
