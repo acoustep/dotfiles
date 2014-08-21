@@ -100,7 +100,7 @@ set ttimeoutlen=100
 
 
 " Insert remaps
-inoremap jj <Esc>
+inoremap jk <Esc>
 " Use tab to scroll through buffer
 " inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 " inoremap <s-tab> <c-p>
