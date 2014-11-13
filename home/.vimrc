@@ -54,6 +54,8 @@ NeoBundle 'mutewinter/nginx.vim'
 NeoBundle 'skwp/vim-rspec'
 NeoBundle 'xsbeats/vim-blade'
 NeoBundle 'jtratner/vim-flavored-markdown'
+NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'heartsentwined/vim-emblem'
 
 filetype plugin indent on " Required for NeoBundle
 
