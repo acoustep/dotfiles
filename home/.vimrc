@@ -39,6 +39,7 @@ NeoBundle 'tpope/vim-abolish'
 " NeoBundle Languages
 NeoBundle 'elzr/vim-json'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'slim-template/vim-slim'
@@ -137,7 +138,7 @@ vmap <Enter> <Plug>(EasyAlign)
 colorscheme ChocolateLiquor
 
 " Set js files to javascript and jquery syntax
-au BufRead,BufNewFile *.js set ft=javascript syntax=jquery
+au BufRead,BufNewFile *.js set ft=javascript
 " On load auto indent HTML
 autocmd BufRead,BufWritePre *.html normal gg=G
 
