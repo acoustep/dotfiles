@@ -45,7 +45,7 @@ parse_git_branch () {
 source $(brew --prefix nvm)/nvm.sh
 export NVM_DIR=~/.nvm
 
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+export PATH=$PATH:~/.composer/vendor/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 PS1="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h\[$WHITE\]:\[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
 
