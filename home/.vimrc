@@ -1,17 +1,29 @@
 set nocompatible " Be iMproved
 
 if has('vim_starting')
+        if &compatible
+               set nocompatible               " Be iMproved
+        endif
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
  " Let NeoBundle manage NeoBundle
  NeoBundleFetch 'Shougo/neobundle.vim'
 
  " Recommended to install
  " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
- NeoBundle 'Shougo/vimproc'
+ NeoBundle 'Shougo/vimproc.vim', {
+			 \ 'build' : {
+			 \     'windows' : 'tools\\update-dll-mingw',
+			 \     'cygwin' : 'make -f make_cygwin.mak',
+			 \     'mac' : 'make -f make_mac.mak',
+			 \     'linux' : 'make',
+			 \     'unix' : 'gmake',
+			 \    },
+			 \ }
+
 
 " Utility Bundles
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
@@ -56,6 +68,8 @@ NeoBundle 'xsbeats/vim-blade'
 NeoBundle 'jtratner/vim-flavored-markdown'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'heartsentwined/vim-emblem'
+
+call neobundle#end()
 
 filetype plugin indent on " Required for NeoBundle
 
@@ -173,3 +187,5 @@ inoreabbrev ahve have
 cnoreabbrev Wq wq
 cnoreabbrev W w
 cnoreabbrev Q q
+
+NeoBundleCheck
