@@ -76,13 +76,9 @@ filetype plugin indent on " Required for NeoBundle
 " Boolean Settings
 :syntax on
 set backup " backup files
-if &backupdir =~# '^\.,'
-  let &backupdir = '/Usrs/mitch/.vim/backup,' . &backupdir
-endif
 set swapfile " .swp files
-if &directory =~# '^\.,'
-  let &directory = '/Usrs/mitch/.vim/swap,' . &directory
-endif
+set backupdir=$TMPDIR//
+set directory=$TMPDIR//
 set hlsearch " Highlight search
 set number " Line numbers
 set showmatch " show search matches as you type
