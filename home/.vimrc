@@ -47,6 +47,7 @@ NeoBundle 'tobyS/pdv' " PHPDocs
 NeoBundle 'depuracao/vim-rdoc'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'tpope/vim-abolish'
+NeoBundle 'dkprice/vim-easygrep'
 
 " NeoBundle Languages
 NeoBundle 'elzr/vim-json'
@@ -68,6 +69,9 @@ NeoBundle 'xsbeats/vim-blade'
 NeoBundle 'jtratner/vim-flavored-markdown'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'heartsentwined/vim-emblem'
+NeoBundle 'farfanoide/vim-facebook'
+NeoBundle 'm2mdas/phpcomplete-extended'
+NeoBundle 'm2mdas/phpcomplete-extended-laravel'
 
 call neobundle#end()
 
@@ -96,6 +100,9 @@ set smartindent
 let mapleader = "`" " Remap leader key
 let &t_Co=256
 let g:ctrlp_extensions = ['funky']
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/node_modules/*  
+let g:ctrlp_show_hidden = 1
+let g:phpcomplete_index_composer_command = 'composer dumpautoload --optimize'
 
 set background=dark
 set ts=2
@@ -143,16 +150,17 @@ nmap <Leader>a <Plug>(EasyAlign)
 " Visual remap
 vnoremap / /\v
 vnoremap ? ?\v
-vnoremap <tab> >
-vnoremap <s-tab> <
+vnoremap <tab> >gv
+vnoremap <s-tab> <gv
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
-colorscheme ChocolateLiquor
+colorscheme Facebook
 
 " Set js files to javascript and jquery syntax
 au BufRead,BufNewFile *.js set ft=javascript
 " On load auto indent HTML
 autocmd BufRead,BufWritePre *.html normal gg=G
+autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
 augroup vimscript
   autocmd!
